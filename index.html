@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑帮地盘争夺战</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="status-bar">
+            <div id="money">资金: $1000</div>
+            <div id="influence">影响力: 0</div>
+            <div id="time">天数: 1</div>
+        </div>
+        
+        <div id="game-content">
+            <canvas id="game-map" width="700" height="400"></canvas>
+            
+            <div id="side-panel">
+                <div id="region-info" class="panel-section">
+                    <h3>区域信息</h3>
+                    <div id="region-details">点击地图区域查看详情</div>
+                </div>
+                
+                <div id="gang-members" class="panel-section">
+                    <h3>帮派成员</h3>
+                    <div id="members-list"></div>
+                </div>
+                
+                <div id="actions" class="panel-section">
+                    <h3>行动</h3>
+                    <button id="btn-next-day">下一天</button>
+                    <button id="btn-recruit">招募成员 ($200)</button>
+                    <button id="btn-upgrade">升级总部</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="event-log" class="panel-section">
+            <h3>事件日志</h3>
+            <div id="log-content"></div>
+        </div>
+    </div>
+
+    <script src="map.js"></script>
+    <script src="gang.js"></script>
+    <script src="economy.js"></script>
+    <script src="ui.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
